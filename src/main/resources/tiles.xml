@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    <definition name="default" template="/WEB-INF/views/layouts/layouts-tiles.jsp">
+        <put-attribute name="header" value="/WEB-INF/views/layouts/header.jsp" />
+        <put-attribute name="header-mobile" value="/WEB-INF/views/layouts/header-mobile.jsp" />
+        <put-attribute name="content" value="" />
+        <put-attribute name="footer" value="/WEB-INF/views/layouts/footer.jsp" />
+    </definition>
+
+    <definition name="/*/*/*/*/*.fgic" extends="default">
+        <put-attribute name="content" value="/WEB-INF/views/{1}/{2}/{3}/{4}/{5}.jsp" />
+    </definition>
+    <definition name="/*/*/*/*.fgic" extends="default">
+        <put-attribute name="content" value="/WEB-INF/views/{1}/{2}/{3}/{4}.jsp" />
+    </definition>
+    <definition name="/*/*/*.fgic" extends="default">
+        <put-attribute name="content" value="/WEB-INF/views/{1}/{2}/{3}.jsp" />
+    </definition>
+    <definition name="/*/*.fgic" extends="default">
+        <put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp" />
+    </definition>
+    <definition name="/*.fgic" extends="default">
+        <put-attribute name="content" value="/WEB-INF/views/{1}.jsp" />
+    </definition>
+    <definition name="*.fgic" extends="default">
+        <put-attribute name="content" value="/WEB-INF/views/{1}.jsp" />
+    </definition>
+
+    <definition name="main" template="/WEB-INF/views/layouts/main-tiles.jsp" >
+        <put-attribute name="header" value="/WEB-INF/views/layouts/header.jsp" />
+        <put-attribute name="header-mobile" value="/WEB-INF/views/layouts/header-mobile.jsp" />
+        <put-attribute name="content" value="" />
+        <put-attribute name="footer" value="/WEB-INF/views/layouts/footer.jsp" />
+    </definition>
+
+    <definition name="/*/*/*/*/*.main" extends="main">
+        <put-attribute name="content" value="/WEB-INF/views/{1}/{2}/{3}/{4}/{5}.jsp" />
+    </definition>
+    <definition name="/*/*/*/*.main" extends="main">
+        <put-attribute name="content" value="/WEB-INF/views/{1}/{2}/{3}/{4}.jsp" />
+    </definition>
+    <definition name="/*/*/*.main" extends="main">
+        <put-attribute name="content" value="/WEB-INF/views/{1}/{2}/{3}.jsp" />
+    </definition>
+    <definition name="/*/*.main" extends="main">
+        <put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp" />
+    </definition>
+    <definition name="/*.main" extends="main">
+        <put-attribute name="content" value="/WEB-INF/views/{1}.jsp" />
+    </definition>
+    <definition name="*.main" extends="main">
+        <put-attribute name="content" value="/WEB-INF/views/{1}.jsp" />
+    </definition>
+
+    <definition name="popup" template="/WEB-INF/views/layouts/pop-tiles.jsp" >
+        <put-attribute name="content" value="" />
+    </definition>
+
+    <definition name="/*/*/*/*.popup" extends="popup">
+        <put-attribute name="content" value="/WEB-INF/views/{1}/{2}/{3}/{4}.jsp" />
+    </definition>
+    <definition name="/*/*/*.popup" extends="popup">
+        <put-attribute name="content" value="/WEB-INF/views/{1}/{2}/{3}.jsp" />
+    </definition>
+    <definition name="/*/*.popup" extends="popup">
+        <put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp" />
+    </definition>
+    <definition name="/*.popup" extends="popup">
+        <put-attribute name="content" value="/WEB-INF/views/{1}.jsp" />
+    </definition>
+    <definition name="*.popup" extends="popup">
+        <put-attribute name="content" value="/WEB-INF/views/{1}.jsp" />
+    </definition>
+
+    <definition name="/*/*.error" template="/WEB-INF/views/layouts/error-tiles.jsp">
+        <put-attribute name="content" value="/WEB-INF/views/error/{1}.jsp" />
+    </definition>
+</tiles-definitions>
